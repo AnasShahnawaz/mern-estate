@@ -26,7 +26,8 @@ function ListingCard({ key, listing }) {
           {listing.description}
         </p>
         <p className="text-slate-500 font-semibold">
-          ${listing.regularPrice} {listing.type === "rent" ? "/ month" : ""}
+          ${listing.regularPrice.toLocaleString()}{" "}
+          {listing.type === "rent" && "/ month"}
         </p>
         <div className="flex gap-3">
           <p className="text-xs font-semibold">
