@@ -28,7 +28,7 @@ function ForgotPassword() {
   }
 
   return (
-    <div className="flex flex-col max-w-lg mx-auto">
+    <div className="flex flex-col max-w-lg mx-auto p-5">
       <h1 className="text-3xl text-center font-semibold my-10">
         Enter Your Email
       </h1>
