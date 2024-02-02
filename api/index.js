@@ -13,7 +13,11 @@ const app = express();
 const __dirname = path.resolve();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["https://mern-estate-one.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+}));
 app.use(cookieParser());
 
 dbConnect();
