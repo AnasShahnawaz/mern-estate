@@ -10,7 +10,11 @@ import { port } from "./config/index.js";
 const app = express(); 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["https://mern-estate-sigma.vercel.app"],
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(cookieParser());
 
 dbConnect();
