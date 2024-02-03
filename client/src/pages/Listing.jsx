@@ -97,8 +97,12 @@ function Listing() {
           <div className="flex flex-wrap flex-col flex-wrap p-3 my-7 max-w-4xl mx-auto gap-4">
             <h1 className="font-semibold text-2xl">
               {listing.type === "rent"
-                ? `${listing.title} - $${listing.regularPrice} / month`
-                : `${listing.title} - $${listing.regularPrice}`}
+                ? `${
+                    listing.title
+                  } - $${listing.regularPrice?.toLocaleString()} / month`
+                : `${
+                    listing.title
+                  } - $${listing.regularPrice?.toLocaleString()}`}
             </h1>
             <p className="flex flex-wrap mt-5 items-center text-sm text-gray-700 font-semibold gap-2">
               <FaMapMarkerAlt className="text-green-700" />
@@ -110,7 +114,7 @@ function Listing() {
               </p>
               {listing.discountedPrice && (
                 <p className="flex flex-wrap items-center justify-center bg-green-900 text-white w-48 h-8 rounded-md">
-                  ${listing.discountedPrice} discount
+                  ${listing.discountedPrice?.toLocaleString()} discount
                 </p>
               )}
             </div>

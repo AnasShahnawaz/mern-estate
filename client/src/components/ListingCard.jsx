@@ -19,7 +19,7 @@ function ListingCard({ key, listing }) {
       <div className="flex flex-wrap flex-col w-full gap-2 p-3">
         <h1 className="font-semibold text-slate-700">{listing.title}</h1>
         <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-sm text-green-700" />
+          <FaMapMarkerAlt class Name="text-sm text-green-700" />
           <p className="text-xs text-slate-500">{listing.address}</p>
         </div>
         <p className="text-xs text-slate-500 overflow-hidden line-clamp-2">
