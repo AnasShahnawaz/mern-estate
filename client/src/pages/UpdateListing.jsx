@@ -175,7 +175,7 @@ function CreateListing() {
         return setError("Discounted price must be lower than regular price");
       }
       const { data } = await axios.put(
-        `/api/listing/update/${params.listingId}`,
+        `https://mern-estate-server-phi.vercel.app/api/listing/update/${params.listingId}`,
         formData
       );
       if (data.error) {
