@@ -16,7 +16,7 @@ function Home() {
   useEffect(() => {
     async function fetchOfferListings() {
       try {
-        const { data } = await axios.get("/api/listing/get?offer=true&limit=4");
+        const { data } = await axios.get("https://mern-estate-server-phi.vercel.app/api/listing/get?offer=true&limit=4");
         setOfferListings(data);
         fetchRentListings();
       } catch (error) {
