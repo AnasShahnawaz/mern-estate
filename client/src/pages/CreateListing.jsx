@@ -153,7 +153,7 @@ function CreateListing() {
       }
       setLoading(true);
       setError(null);
-      const res = await axios.post("/api/listing/create", formData);
+      const res = await axios.post("https://mern-estate-server-phi.vercel.app/api/listing/create", formData);
       const data = res.data;
       if (data.error) {
         setLoading(false);
