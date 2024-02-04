@@ -10,7 +10,7 @@ function Modal({ listing, close }) {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const { data } = await axios.get(`/api/user/get/${listing.userId}`);
+        const { data } = await axios.get(`https://mern-estate-server-phi.vercel.app/api/user/get/${listing.userId}`);
         if (data.error) {
           setError(data.error);
           return;
