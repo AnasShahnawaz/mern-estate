@@ -63,9 +63,10 @@ function Signin() {
         />
         <button
           className="uppercase p-3 text-white bg-slate-700 rounded-lg disabled:opacity-80"
-          disabled={loading}
+{/*           disabled={loading} */}
         >
-          {loading ? "Loading..." : "Sign in"}
+{/*           {loading ? "Loading..." : "Sign in"} */}
+        Sign in
         </button>
         <OAuth />
       </form>
