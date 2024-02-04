@@ -17,7 +17,7 @@ function Signup() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("/api/auth/signup", formData, {
+      const res = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signup", formData, {
         withCredentials: true,
       });
       const data = await res.data;
