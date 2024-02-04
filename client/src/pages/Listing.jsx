@@ -54,9 +54,9 @@ function Listing() {
 
   return (
     <main>
-      {loading && <p className="text-center text-2xl my-7">Loading...</p>}
+      {loading && <p className="text-center text-md md:text-2xl my-7">Loading...</p>}
       {error && (
-        <p className="text-center text-2xl my-7">
+        <p className="text-center text-md md:text-2xl my-7">
           Something went wrong, please try again later
         </p>
       )}
