@@ -32,7 +32,7 @@ function Listing() {
         setLoading(true);
         setError(false);
         const { data } = await axios.get(
-          `/api/listing/get/${params.listingId}`
+          `https://mern-estate-server-phi.vercel.app/api/listing/get/${params.listingId}`
         );
         if (data.error) {
           setLoading(false);
