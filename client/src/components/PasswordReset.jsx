@@ -14,7 +14,7 @@ function PasswordReset() {
   useEffect(() => {
     async function verifyUrl() {
       try {
-        const res = axios.get(`/api/user/${params.id}/${params.token}`);
+        const res = axios.get(`https://mern-estate-server-phi.vercel.app/api/user/${params.id}/${params.token}`);
         console.log(res.data);
         setValidUrl(true);
       } catch (err) {
