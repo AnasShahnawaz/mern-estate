@@ -56,7 +56,7 @@ function Search() {
         setLoading(true);
         setShowMore(false);
         const searchQuery = urlParams.toString();
-        const { data } = await axios.get(`/api/listing/get?${searchQuery}`);
+        const { data } = await axios.get(`https://mern-estate-server-phi.vercel.app/api/listing/get?${searchQuery}`);
         if (data.length > 8) {
           setShowMore(true);
         } else {
