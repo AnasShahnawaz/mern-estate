@@ -16,7 +16,7 @@ import Search from "./pages/Search";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="https://mern-estate-sigma.vercel.app">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
