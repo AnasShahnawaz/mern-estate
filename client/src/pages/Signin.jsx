@@ -23,11 +23,9 @@ function Signin() {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signin", formData, {
+      const { data } = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signin", formData, {
         withCredentials: true,
       });
-      const data = await res.data;
-      console.log(data);
       if (data.error) {
         dispatch(signInFailure(data.error));
       } else if (data.message) {
@@ -35,6 +33,7 @@ function Signin() {
       } else {
         dispatch(signInSuccess(data));
         navigate("/");
+        console.log(data);
       }
     } catch (err) {
       signInFailure();
