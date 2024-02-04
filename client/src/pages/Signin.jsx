@@ -23,7 +23,7 @@ function Signin() {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await axios.post("/api/auth/signin", formData, {
+      const res = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signin", formData, {
         withCredentials: true,
       });
       const data = await res.data;
