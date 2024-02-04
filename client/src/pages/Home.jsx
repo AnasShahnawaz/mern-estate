@@ -26,7 +26,7 @@ function Home() {
 
     async function fetchRentListings() {
       try {
-        const { data } = await axios.get("/api/listing/get?type=rent&limit=4");
+        const { data } = await axios.get("https://mern-estate-server-phi.vercel.app/api/listing/get?type=rent&limit=4");
         setRentListings(data);
         fetchSellListings();
       } catch (error) {
@@ -36,7 +36,7 @@ function Home() {
 
     async function fetchSellListings() {
       try {
-        const { data } = await axios.get("/api/listing/get?type=sell&limit=4");
+        const { data } = await axios.get("https://mern-estate-server-phi.vercel.app/api/listing/get?type=sell&limit=4");
         setSellListings(data);
       } catch (error) {
         console.log(error);
