@@ -31,7 +31,7 @@ function PasswordReset() {
     try {
       setLoading(true);
       const res = await axios.post(
-        `/api/user/reset/password/${params.id}/${params.token}`,
+        `https://mern-estate-server-phi.vercel.app/api/user/reset/password/${params.id}/${params.token}`,
         { password },
         {
           withCredentials: true,
