@@ -11,7 +11,7 @@ import OAuth from "../components/OAuth";
 
 function Signin() {
   const [formData, setFormData] = useState({});
-  const { loading, error, message } = useSelector((state) => state.user);
+  const { error, message } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -63,9 +63,10 @@ function Signin() {
         />
 {/*         <button
           className="uppercase p-3 text-white bg-slate-700 rounded-lg disabled:opacity-80"
-          disabled={loading}
+          // disabled={loading}
         >
-          {loading ? "Loading..." : "Sign in"}
+          // {loading ? "Loading..." : "Sign in"}
+          Sign in
         </button> */}
         <OAuth />
       </form>
