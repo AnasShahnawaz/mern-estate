@@ -11,7 +11,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post('/api/user/reset/password', { email });
+      const res = await axios.post('https://mern-estate-server-phi.vercel.app/api/user/reset/password', { email });
       const data = await res.data;
       if (data.error) {
         setLoading(false);
