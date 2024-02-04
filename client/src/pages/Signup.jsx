@@ -17,10 +17,9 @@ function Signup() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signup", formData, {
+      const { data } = await axios.post("https://mern-estate-server-phi.vercel.app/api/auth/signup", formData, {
         withCredentials: true,
       });
-      const data = await res.data;
       if (data.error) {
         setLoading(false);
         setError(data.error);
