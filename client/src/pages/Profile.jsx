@@ -72,7 +72,7 @@ function Profile() {
     try {
       dispatch(updateUserStart());
       const res = await axios.put(
-        `/api/user/update/${currentUser._id}`,
+        `https://mern-estate-server-phi.vercel.app/api/user/update/${currentUser._id}`,
         formData
       );
       const data = res.data;
@@ -90,7 +90,7 @@ function Profile() {
   async function handleSignOut() {
     try {
       dispatch(signOutUserStart());
-      const res = await axios.get("/api/auth/signout");
+      const res = await axios.get("https://mern-estate-server-phi.vercel.app/api/auth/signout");
       const data = res.data;
       if (data.error) {
         dispatch(signOutUserFailure(data.error));
@@ -106,7 +106,7 @@ function Profile() {
   async function handleDeleteUser() {
     try {
       dispatch(deleteUserStart());
-      const res = await axios.delete(`/api/user/delete/${currentUser._id}`);
+      const res = await axios.delete(`https://mern-estate-server-phi.vercel.app/api/user/delete/${currentUser._id}`);
       const data = res.data;
       if (data.error) {
         dispatch(deleteUserFailure(data.error));
@@ -123,7 +123,7 @@ function Profile() {
   async function handleShowListings() {
     try {
       setShowLisitngsError(null);
-      const { data } = await axios.get(`/api/user/listings/${currentUser._id}`);
+      const { data } = await axios.get(`https://mern-estate-server-phi.vercel.app/api/user/listings/${currentUser._id}`);
       if (data.error) {
         setShowLisitngsError(data.error);
         return;
@@ -144,7 +144,7 @@ function Profile() {
 
   async function handleDeleteListing(listingId) {
     try {
-      const { data } = await axios.delete(`/api/listing/delete/${listingId}`);
+      const { data } = await axios.delete(`https://mern-estate-server-phi.vercel.app/api/listing/delete/${listingId}`);
       if (data.error) {
         setShowLisitngsError(data.error);
         return;
