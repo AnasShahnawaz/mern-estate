@@ -9,7 +9,7 @@ function EmailVerify() {
   useEffect(() => {
     async function verifyEmailUrl() {
       try {
-        const res = axios.get(`/api/user/${params.id}/verify/${params.token}`);
+        const res = axios.get(`https://mern-estate-server-phi.vercel.app/api/user/${params.id}/verify/${params.token}`);
         console.log(res.data);
         setValidUrl(true);
       } catch (err) {
