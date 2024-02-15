@@ -1,9 +1,9 @@
 function About() {
   return (
     <div className="max-w-5xl mx-auto py-20 px-4">
-      <h1 className="text-slate-700 font-bold text-2xl">About Anas Estate</h1>
+      <h1 className="text-slate-700 font-bold text-2xl">About Mern Estate</h1>
       <p className="mt-4 text-slate-700">
-        Anas Estate is a leading real estate agency that sepcializes in helping
+        Mern Estate is a leading real estate agency that sepcializes in helping
         clients buy, sell, and rent properties in the most desirable
         neightborhoods. Our team of experienced agents is dedicated to providing
         exceptional service and making the buying and selling process as smooth
