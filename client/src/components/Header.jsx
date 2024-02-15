@@ -29,7 +29,7 @@ function Header() {
       <div className="flex items-center w-[90%] h-[60px] mx-auto justify-between">
         <Link to={"/"}>
           <h1 className="flex flex-wrap font-bold text-sm md:text-xl">
-            <span className="text-slate-500">Anas</span>
+            <span className="text-slate-500">Mern</span>
             <span className="text-slate-700">Estate</span>
           </h1>
         </Link>
