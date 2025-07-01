@@ -3,8 +3,11 @@ import Token from "../models/token.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
+import dotenv from 'dotenv';
 import { jwt_secret_key } from "../config/index.js";
 import { sendEmail } from "../utils/sendEmail.js";
+dotenv.config();
+
 
 export async function signup(req, res, next) {
     const { username, email, password } = req.body;
